@@ -1,0 +1,557 @@
+/* -----------------------------  General   -----------------------------*/
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  margin: 0px;
+  max-width: 480px;
+  min-width: 220px;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  color: #000000;
+  background-color: #ffffff;
+  /* -----------------------------  Headings   -----------------------------*/
+  /* -----------------------------  Links   -----------------------------*/
+  /* -----------------------------  Structure   -----------------------------*/
+}
+body p {
+  font-size: 1rem;
+}
+body #top-button {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  bottom: 100px;
+  right: 30px;
+  color: #ffffff;
+  background-color: #252525;
+  font-size: 2rem;
+  position: fixed;
+  text-align: center;
+  line-height: 10px;
+}
+body #top-button a {
+  color: #ffffff;
+  text-decoration: none;
+}
+body h1 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-family: "Montserrat", Tahoma, Verdana, sans-serif;
+  font-size: 2.5rem;
+  color: #000000;
+}
+body h2 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-family: "Montserrat", Tahoma, Verdana, sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #000000;
+}
+body h3 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-family: "Montserrat", Tahoma, Verdana, sans-serif;
+  font-size: 1.1rem;
+  color: #000000;
+}
+body h4 {
+  margin: 0;
+  font-family: "Montserrat", Tahoma, Verdana, sans-serif;
+  font-size: 1rem;
+  color: #000000;
+}
+body a {
+  color: #000000;
+  text-decoration: none;
+}
+body a:hover:active {
+  color: #000000;
+}
+body a:visited {
+  font-weight: bold;
+  color: #000000;
+  border-bottom: 1px solid #e6bd43;
+}
+body .link-button-golden, body .link-button-goldenblack {
+  display: inline-block;
+  padding: 9px;
+  text-align: center;
+  text-decoration: none;
+  color: #252525;
+  background-color: #e6bd43;
+}
+body .link-button-golden:hover:active:visited, body .link-button-goldenblack:hover:active:visited {
+  text-decoration: none;
+  color: #252525;
+  background-color: #e6bd43;
+}
+body .link-button-goldenblack {
+  border: 1px solid #252525;
+}
+body .link-button-goldenblack:hover:active:visited {
+  text-decoration: none;
+  color: #252525;
+  background-color: #e6bd43;
+  border: 1px solid #252525;
+}
+body .link-button-white {
+  display: inline-block;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: #252525;
+  border: 1px solid #252525;
+}
+body .link-button-white:hover:active:visited {
+  text-decoration: none;
+  color: #252525;
+}
+body .link-footer {
+  text-decoration: none;
+  color: #ffffff;
+}
+body .link-footer:hover:active:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+body #grid {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  gap: 0rem 0rem;
+}
+body header {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 10px;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  background-color: #ffffff;
+}
+body header nav {
+  text-align: center;
+}
+body header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body header nav ul li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+body header img {
+  margin: auto;
+  display: block;
+  width: 20%;
+}
+body main {
+  max-width: 480px;
+  min-width: 220px;
+  margin-top: 30px;
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+body main #frontpage-headline {
+  padding: 30px;
+  text-align: center;
+  background-image: url("../ressurser/branding1.jpg");
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+body main #video-wrapper video {
+  display: none;
+}
+body main #frontpage-subheading {
+  padding: 30px;
+  width: 100%;
+  text-align: center;
+  background-color: #ffffff;
+}
+body main #frontpage-about {
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
+  background-color: #e6bd43;
+}
+body main #frontpage-about img {
+  width: 200px;
+  height: 200px;
+}
+body main #frontpage-services, body main #aboutpage-services {
+  padding: 30px;
+  width: 100%;
+  text-align: center;
+  background-color: #ffffff;
+}
+body main #frontpage-services img, body main #aboutpage-services img {
+  width: 10%;
+}
+body main #frontpage-services article, body main #aboutpage-services article {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+body main #frontpage-services p, body main #aboutpage-services p {
+  margin: 0;
+}
+body main #frontpage-newsletter {
+  padding: 30px;
+  width: 100%;
+  text-align: center;
+  background-color: #e2e2e2;
+}
+body main #frontpage-newsletter label {
+  display: none;
+}
+body main #frontpage-newsletter input[type=text] {
+  height: 40px;
+  border: none;
+}
+body main #frontpage-newsletter input[type=submit] {
+  height: 40px;
+  border: none;
+  font-weight: bold;
+}
+body main #aboutpage-headline {
+  padding: 30px;
+  text-align: center;
+  background-image: url("../ressurser/branding1.jpg");
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+body main #aboutpage-headline #aboutbox {
+  margin: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.5);
+}
+body main #aboutpage-headline #aboutbox #about-name {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+body main #aboutpage-clients {
+  padding: 30px;
+  width: 100%;
+  text-align: center;
+  background-color: #e6bd43;
+}
+body main #aboutpage-clients img {
+  margin: 10px;
+  width: 15%;
+}
+body main #aboutpage-contact {
+  padding: 30px;
+  width: 100%;
+  text-align: center;
+  background-color: #e2e2e2;
+}
+body main #aboutpage-contact #contact-form {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+body main #aboutpage-contact #contact-form input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 40px;
+  border: none;
+  font-size: 1rem;
+}
+body main #aboutpage-contact #contact-information {
+  margin-top: 20px;
+  text-align: center;
+}
+body main #aboutpage-contact #contact-information p {
+  margin: 0;
+}
+body main #aboutpage-map {
+  width: 100%;
+}
+body main #aboutpage-map iframe {
+  width: 100%;
+}
+body main #portfolio-heading {
+  padding: 30px;
+  width: 100%;
+  text-align: center;
+  background-image: url("../ressurser/development1.jpg");
+  background-size: cover;
+}
+body main #portfolio-explore {
+  padding: 30px;
+  text-align: left;
+}
+body main #portfolio-explore h2 {
+  margin-bottom: 10px;
+  border-bottom: 2px solid #e6bd43;
+}
+body main #portfolio-branding {
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body main #portfolio-branding h2 {
+  display: block;
+  width: 100%;
+  border-bottom: 2px solid #e6bd43;
+}
+body main #portfolio-branding img {
+  width: 200px;
+  height: 200px;
+}
+body main #portfolio-design {
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body main #portfolio-design h2 {
+  display: block;
+  width: 100%;
+  border-bottom: 2px solid #e6bd43;
+}
+body main #portfolio-design img {
+  width: 200px;
+  height: 200px;
+}
+body main #portfolio-development {
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body main #portfolio-development h2 {
+  display: block;
+  width: 100%;
+  border-bottom: 2px solid #e6bd43;
+}
+body main #portfolio-development img {
+  width: 200px;
+  height: 200px;
+}
+body footer {
+  margin: 0;
+  padding: 10px;
+  grid-column: 1/2;
+  grid-row: 3/4;
+  background-color: #252525;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+body footer img {
+  width: 15%;
+}
+body footer p {
+  color: #ffffff;
+}
+body footer #some-icons {
+  color: #ffffff;
+  font-size: 1.8rem;
+}
+
+/* -----------------------------  MEDIA QUERIES: DESKTOP STYLESHEET  -----------------------------*/
+@media only screen and (min-width: 480px) {
+  body {
+    max-width: 1600px;
+    /* -----------------------------  Links change  -----------------------------*/
+    /* -----------------------------  Structure change  -----------------------------*/
+  }
+  body a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: #252525;
+  }
+  body .link-button-golden:hover, body .link-button-goldenblack:hover {
+    text-decoration: none;
+    color: #e6bd43;
+    background-color: #252525;
+  }
+  body .link-button-goldenblack:hover {
+    text-decoration: none;
+    color: #e6bd43;
+    background-color: #252525;
+    border: 1px solid #252525;
+  }
+  body #grid {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: auto auto auto;
+    gap: 0rem 0rem;
+  }
+  body header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    grid-column: 1/5;
+    grid-row: 1/2;
+    background-color: #ffffff;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+  }
+  body header nav ul li {
+    margin: 10px;
+    display: inline-block;
+  }
+  body header img {
+    width: 50%;
+  }
+  body main {
+    max-width: 1600px;
+    grid-column: 2/4;
+    grid-row: 2/3;
+  }
+  body main #frontpage-headline {
+    position: relative;
+    padding: 30px;
+    background-image: none;
+    background: rgba(255, 255, 255, 0.5);
+  }
+  body main #video-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body main #video-wrapper video {
+    display: block;
+    overflow: hidden;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  body main #frontpage-about {
+    padding: 30px;
+    width: 100%;
+    background-color: #e6bd43;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  body main #frontpage-about img {
+    margin: 10px;
+    width: 250px;
+    height: 250px;
+  }
+  body main #frontpage-about article {
+    margin: 10px;
+    width: 250px;
+  }
+  body main #frontpage-services, body main #aboutpage-services {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: flex-start;
+  }
+  body main #frontpage-services h2, body main #aboutpage-services h2 {
+    display: inline-block;
+    width: 100%;
+  }
+  body main #frontpage-services article, body main #aboutpage-services article {
+    margin: 5px;
+    width: 20%;
+  }
+  body main #frontpage-services article img, body main #aboutpage-services article img {
+    width: 25%;
+  }
+  body main #frontpage-newsletter {
+    padding: 30px;
+    width: 100%;
+    text-align: center;
+    background-color: #e2e2e2;
+  }
+  body main #frontpage-newsletter label {
+    display: none;
+  }
+  body main #frontpage-newsletter input[type=text] {
+    height: 40px;
+    border: none;
+  }
+  body main #frontpage-newsletter input[type=submit] {
+    height: 40px;
+    border: none;
+    font-weight: bold;
+  }
+  body main #aboutpage-headline {
+    overflow: hidden;
+  }
+  body main #aboutpage-headline #aboutbox {
+    float: right;
+    width: 50%;
+  }
+  body main #aboutpage-clients img {
+    width: 10%;
+  }
+  body main #aboutpage-contact {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: flex-start;
+  }
+  body main #aboutpage-contact h2 {
+    display: inline-block;
+    width: 100%;
+  }
+  body main #aboutpage-contact #contact-form {
+    margin: 10px;
+    width: 30%;
+  }
+  body main #aboutpage-contact #contact-form form label {
+    float: left;
+  }
+  body main #aboutpage-contact #contact-information {
+    margin: 10px;
+    width: 30%;
+  }
+  body main #portfolio-branding img {
+    width: 350px;
+    height: 350px;
+  }
+  body main #portfolio-design img {
+    width: 350px;
+    height: 350px;
+  }
+  body main #portfolio-development img {
+    width: 350px;
+    height: 350px;
+  }
+  body footer {
+    grid-column: 1/5;
+    grid-row: 3/4;
+  }
+  body footer img {
+    width: 10%;
+  }
+}/*# sourceMappingURL=main.css.map */

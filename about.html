@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Stilsett for nettstedet -->
+    <!-- Stilsett og favikon for nettstedet -->
     <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="ressurser/fav.png">
     
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,14 +25,14 @@
 
     <!-- Headerområde start -->
     <header>
-        <a href="index.html" title="Back to homepage" aria-label="Back to homepage"><img src="ressurser/logo1.png" alt="A picture of our logo"></a>
+        <a href="index.html" title="Go to home page" aria-label="Go to home page"><img src="ressurser/logo1.png" alt="A picture of our logo"></a>
         <!-- Navigasjon start -->
         <nav>
-             <ul>
-                <li><a href="index.html" title="Home" aria-label="Home">Home</a></li>
-                <li><a href="portfolio.html" title="Portfolio" aria-label="Portfolio">Portfolio</a></li>
-                <li><a href="about.html" title="About" aria-label="About">About</a></li>
-                <li><a href="#aboutpage-contact" title="Contact" aria-label="Contact" class="link-button-golden">Contact</a></li>
+             <ul role="menubar">
+                <li role="menuitem"><a href="index.html" aria-label="Home">Home</a></li>
+                <li role="menuitem"><a href="portfolio.html" aria-label="Portfolio">Portfolio</a></li>
+                <li role="menuitem"><a href="about.html" aria-label="About">About</a></li>
+                <li role="menuitem"><a href="about.html#aboutpage-contact" aria-label="Contact" class="link-button-golden">Contact</a></li>
             </ul>
         </nav>
         <!-- Navigasjon slutt -->
@@ -46,7 +47,7 @@
                 <p id="about-name">Company name</p>
                 <h3>About our company</h3>
                 <p>Facilisis gravida neque convallis a cras semper auctor neque vitae. Hendrerit gravida rutrum quisque non tellus orci. Ultricies integer quis auctor elit. Neque viverra justo nec ultrices. Quam elementum pulvinar etiam non quam. Vulputate mi sit amet mauris commodo quis imperdiet. </p>
-                <p><a href="#aboutpage-contact" title="Get in touch" aria-label="Get in touch with us" class="link-button-golden">Get in touch with us</a></p>
+                <p><a href="#aboutpage-contact" aria-label="Get in touch with us" class="link-button-golden">Get in touch with us</a></p>
             </article>
         </section>
         <!-- Seksjon for about-box slutt -->  
@@ -54,23 +55,24 @@
         <!-- Seksjon for services start -->
         <section id="aboutpage-services">
             <h2>Our services</h2>
+            <!-- Ikoner anses også som ren dekorasjon/pynt -->
             <article>
-                <img src="ressurser/users.png" alt="An icon of a group of people">
+                <img src="ressurser/users.png" alt="" aria-hidden="true">
                 <h3>Branding</h3>
                 <p>Neque viverra justo nec ultrices. Quam elementum pulvinar etiam non quam.</p>
             </article>
             <article>
-                <img src="ressurser/cloud.png" alt="A cloud icon">
+                <img src="ressurser/cloud.png" alt="" aria-hidden="true">
                 <h3>Design</h3>
                 <p>Vulputate mi sit amet mauris commodo quis imperdiet.</p>
             </article>
             <article>
-                <img src="ressurser/code.png" alt="Code icon">
+                <img src="ressurser/code.png" alt="" aria-hidden="true">
                 <h3>Development</h3>
                 <p>Malesuada nunc vel risus commodo viverra maecenas. Massa massa ultricies mi quis hendrerit.</p>
             </article>
             <article>
-                <img src="ressurser/wifi.png" alt="Wifi icon">
+                <img src="ressurser/wifi.png" alt="" aria-hidden="true">
                 <h3>Support</h3>
                 <p>Purus sit amet volutpat consequat mauris nunc congue. Sit amet tellus cras adipiscing enim.</p>
             </article>
@@ -80,9 +82,9 @@
         <!-- Seksjon for clients start -->
         <section id="aboutpage-clients">
             <h2>Some of our clients</h2>
-            <img src="ressurser/logo1.png" alt="A picture of a clients logo">
-            <img src="ressurser/logo2.png" alt="A picture of a clients logo">
-            <img src="ressurser/logo3.png" alt="A picture of a clients logo">
+            <img src="ressurser/logo1.png" alt="The client name">
+            <img src="ressurser/logo2.png" alt="The client 2 name">
+            <img src="ressurser/logo3.png" alt="The client 3 name">
         </section>
         <!-- Seksjon for clients slutt -->
 
@@ -93,30 +95,31 @@
                 <h3>Send us a message</h3>
                 <form method="post">
                     <label for="name">Name</label> 
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" aria-label="Your name" required>
 
                     <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject">
+                    <input type="text" id="subject" name="subject"  aria-label="The subject of your message">
 
                     <label for="message">Message</label>
-                    <input type="text" id="message" name="message">
+                    <input type="text" id="message" name="message" aria-label="Your message">
 
-                    <input type="submit" value="Send message" class="link-button-golden">
+                    <input type="submit" value="Send message" class="link-button-golden" aria-label="Send your message">
                 </form>
             </article>
 
             <article id="contact-information">
                 <h3>Contact information</h3>
                 <p>Massa massa ultricies mi quis hendrerit. Purus sit amet volutpat consequat mauris nunc congue. Sit amet tellus cras adipiscing enim.</p>
-                <p><i class="fa-solid fa-location-pin"></i> B R A Veien 4, 1757 Halden</p>
-                <p><i class="fa-solid fa-phone"></i> 69 60 80 00</p>
-                <p><i class="fa-solid fa-envelope"></i> <a href="mailto:postmottak@hiof.no">postmottak@hiof.no</a></p>
+                <!-- Ikoner anses som dekorasjon/pynt -->
+                <p><i class="fa-solid fa-location-pin" aria-hidden="true"></i> B R A Veien 4, 1757 Halden</p>
+                <p><i class="fa-solid fa-phone" aria-hidden="true"></i> 69 60 80 00</p>
+                <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> <a href="mailto:postmottak@hiof.no" aria-label="Our email address">postmottak@hiof.no</a></p>
             </article>
         </section>
         <!-- Seksjon for contact slutt -->
 
         <!-- Seksjon for kart -->
-        <div id="aboutpage-map">
+        <div id="aboutpage-map" role="application" aria-label="A google map of our loaction">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19475.73379477656!2d11.350865265409423!3d59.13015259832959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464412f6cf4d491d%3A0xdd127f6ec81a545d!2sB%20R%20A%20Veien%204%2C%201783%20Halden!5e0!3m2!1sno!2sno!4v1700140101579!5m2!1sno!2sno" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <!-- Seksjon for kart slutt -->
@@ -125,19 +128,19 @@
 
     <!-- Footer start -->
     <footer>
-        <img src="ressurser/logo1.png" alt="A picture of our logo">
+        <a href="index.html" title="Go to home page" aria-label="Go to home page"><img src="ressurser/logo1.png" alt="A picture of our logo"></a>
         <p>Company copyright 2023</p>
-        <div id="some-icons">
-            <a href="#" title="facebook" aria-label="our facebook" class="link-footer"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#" title="instagram" aria-label="our instagram" class="link-footer"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" title="linkdin" aria-label="our linkdin" class="link-footer"><i class="fa-brands fa-linkedin"></i></a>
+        <div id="some-icons" role="navigation" aria-label="Social media links">
+            <a href="http://www.facebook.com" title="Facebook" aria-label="Link to our facebook" class="link-footer"><i class="fa-brands fa-facebook"></i></a>
+            <a href="http://www.instagram.com" title="Instagram" aria-label="Link to our instagram" class="link-footer"><i class="fa-brands fa-instagram"></i></a>
+            <a href="http://www.linkedin.com" title="Linkdin" aria-label="Link to our linkdin" class="link-footer"><i class="fa-brands fa-linkedin"></i></a>
         </div>
     </footer>
     <!-- Footer slutt -->
 
     <!-- Knapp for navigasjon tilbake til toppen start -->
-    <div id="top-button">
-        <a href="#frontpage-headline" title="Back to the top" aria-label="Back to the top"><i class="fa-solid fa-arrow-up"></i></a>
+    <div id="top-button" role="navigation">
+        <a href="#" title="Go back to the top" aria-label="Go back to the top of the page"><i class="fa-solid fa-arrow-up"></i></a>
     </div>
     <!-- Knapp for navigasjon slutt -->
 

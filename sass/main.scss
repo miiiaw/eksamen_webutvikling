@@ -17,7 +17,7 @@ $normal: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
 html{
-    font-size: 15px;
+    font-size: 13px;
 }
 
 body{
@@ -45,6 +45,7 @@ body{
         position: fixed;
         text-align: center;
         line-height: 10px;
+        border-radius: 10%;
         a{
             color: #ffffff;
             text-decoration: none;
@@ -65,7 +66,7 @@ body{
         margin-top: 10px;
         margin-bottom: 20px;
         font-family: $headings;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         font-weight: bold;
         color: #000000;
     }
@@ -74,7 +75,7 @@ body{
         margin-top: 10px;
         margin-bottom: 20px;
         font-family: $headings;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         color: #000000;
     }
 
@@ -86,17 +87,10 @@ body{
     }
 
 /* -----------------------------  Links   -----------------------------*/
-    a{
-        color: #000000;
+    header nav ul a{
+        color: #252525;
         text-decoration: none;
-        &:hover:active{
-            color: #000000;
-        }
-        &:visited{
-            font-weight: bold;
-            color: #000000;
-            border-bottom: 1px solid #e6bd43;
-        }
+        font-weight: bold;
     }
 
     .link-button-golden{
@@ -104,46 +98,31 @@ body{
         padding: 9px;
         text-align: center;
         text-decoration: none;
+        font-weight: bold;
         color: #252525;
         background-color: #e6bd43;
-        &:hover:active:visited{
-            text-decoration: none;
-            color: #252525;
-            background-color: #e6bd43;
-        }
     }
 
     .link-button-goldenblack{
         @extend .link-button-golden;
         border: 1px solid #252525;
-        &:hover:active:visited{
-            text-decoration: none;
-            color: #252525;
-            background-color: #e6bd43;
-            border: 1px solid #252525; 
-        }
     }
 
     .link-button-white{
+        margin-top: 20px;
+        margin-right: 10px;
         display: inline-block;
-        padding: 15px;
+        padding: 9px;
         text-align: center;
         text-decoration: none;
+        font-weight: bold;
         color: #252525;
         border: 1px solid #252525;
-        &:hover:active:visited{
-            text-decoration: none;
-            color: #252525;
-        }
     }
 
     .link-footer{
         text-decoration: none;
         color: #ffffff;
-        &:hover:active:visited{
-            text-decoration: none;
-            color: #ffffff;
-        }
     }
 
 
@@ -191,7 +170,7 @@ body{
         #frontpage-headline{
             padding: 30px;
             text-align: center;
-            background-image: url("../ressurser/branding1.jpg");
+            background-image: url("../ressurser/header2.jpg");
             background-size: cover;
             width: 100%;
             height: auto;
@@ -262,14 +241,14 @@ body{
         #aboutpage-headline{
             padding: 30px;
             text-align: center;
-            background-image: url("../ressurser/branding1.jpg");
+            background-image: url("../ressurser/header.jpg");
             background-size: cover;
             width: 100%;
             height: auto;
             #aboutbox{
                 margin: 20px;
                 padding: 20px;
-                background: rgba(255, 255, 255, 0.5);
+                background: rgba(255, 255, 255, 0.7);
                 #about-name{
                     font-weight: bold;
                     font-size: 0.8rem;
@@ -331,9 +310,13 @@ body{
         #portfolio-heading{
             padding: 30px;
             width: 100%;
+            height: 250px;
             text-align: center;
-            background-image: url("../ressurser/development1.jpg");
+            background-image: url("../ressurser/header2.jpg");
             background-size: cover;
+            h2{
+                margin-top: 50px;
+            }
         }
 
         #portfolio-explore{
@@ -345,54 +328,72 @@ body{
             }
         }
 
+        .flex-smaller{
+            flex: 1;
+        }
+
+        .flex-grow{
+            flex-grow: 2;
+        }
+
         #portfolio-branding{
             padding: 30px;
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-
+            justify-content: flex-start;
+            align-items: flex-end;
             h2{
-                display: block;
-                width: 100%;
+                flex-basis: 100%;
                 border-bottom: 2px solid #e6bd43;
             }
-            img{
-                width: 200px;
-                height: 200px;
+            article{
+                margin: 10px;
+                max-width: 692px;
+                min-width: 200px;
             }
-
+            img{
+                width: 100%;
+            }
         }
 
         #portfolio-design{
             padding: 30px;
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: flex-start;
+            align-items: flex-end;
             h2{
-                display: block;
-                width: 100%;
+                flex-basis: 100%;
                 border-bottom: 2px solid #e6bd43;
             }
+            article{
+                margin: 10px;
+                max-width: 692px;
+                min-width: 200px;
+            }
             img{
-                width: 200px;
-                height: 200px;
-            }  
+                width: 100%;
+            } 
         }
 
         #portfolio-development{
             padding: 30px;
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: flex-start;
+            align-items: flex-end;
             h2{
-                display: block;
-                width: 100%;
+                flex-basis: 100%;
                 border-bottom: 2px solid #e6bd43;
             }
+            article{
+                margin: 10px;
+                max-width: 692px;
+                min-width: 200px;
+            }
             img{
-                width: 200px;
-                height: 200px;
-            }             
+                width: 100%;
+            }    
         }
     }
 
@@ -425,12 +426,10 @@ body{
 @media only screen and (min-width: 480px){
     body{
         max-width: 1600px;
-
-/* -----------------------------  Links change  -----------------------------*/
-        a:hover{
-            text-decoration: none;
-            font-weight: bold;
-            color: #252525;
+        
+/* -----------------------------  Links change  -----------------------------*/        
+        header nav ul a:active{
+            border-bottom: 2px solid #e6bd43;
         }
     
         .link-button-golden:hover{ 
@@ -538,8 +537,7 @@ body{
                 align-content: center;
                 align-items: flex-start;
                 h2{
-                    display: inline-block;
-                    width: 100%;
+                    flex-basis: 100%;
                 }
                 article{
                     margin: 5px;
@@ -590,8 +588,7 @@ body{
                 align-content: center;
                 align-items: flex-start;
                 h2{
-                    display: inline-block;
-                    width: 100%;
+                    flex-basis: 100%;
                 }
                 #contact-form{
                     margin: 10px;
@@ -605,20 +602,26 @@ body{
                     width: 30%;
                 }
             }
-    
-            #portfolio-branding img{
-                    width: 350px;
-                    height: 350px;
+
+            #portfolio-branding{
+                a:hover img{
+                    transform: scale(1.05);
+                    transition: .4s;
+                }
             }
     
-            #portfolio-design img{
-                    width: 350px;
-                    height: 350px;
+            #portfolio-design{
+                a:hover img{
+                    transform: scale(1.05);
+                    transition: .4s;
+                }
             }
     
-            #portfolio-development img{
-                    width: 350px;
-                    height: 350px;           
+            #portfolio-development{ 
+                a:hover img{
+                    transform: scale(1.05);
+                    transition: .4s;
+                }//https://stackoverflow.com/questions/49156966/change-image-size-on-hover        
             }
         }
 
@@ -627,6 +630,10 @@ body{
             grid-row: 3/4;
             img{
                 width: 10%;
+            }
+            #some-icons a:hover{
+                color: #ffffff;
+                font-size: 2rem;
             }
         }
 

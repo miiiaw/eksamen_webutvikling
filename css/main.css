@@ -475,7 +475,7 @@ body footer #some-icons {
     background-color: #e6bd43;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
   }
   body main #frontpage-about img {

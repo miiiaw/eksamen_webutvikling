@@ -28,8 +28,8 @@ body #top-button {
   width: 40px;
   height: 36px;
   padding: 5px;
-  bottom: 100px;
-  right: 30px;
+  bottom: 13px;
+  right: 20px;
   color: #ffffff;
   background-color: #252525;
   font-size: 2rem;
@@ -72,7 +72,6 @@ body h4 {
 }
 body header nav ul a {
   color: #000000;
-  font-weight: bold;
   text-decoration: none;
 }
 body .link-button-golden, body .link-button-goldenblack {
@@ -103,6 +102,7 @@ body .link-footer {
   color: #ffffff;
 }
 body .active {
+  font-weight: bold;
   border-bottom: 2px solid #e6bd43;
 }
 body #grid {
@@ -162,11 +162,11 @@ body main #frontpage-subheading {
 }
 body main #frontpage-about {
   padding: 30px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   justify-items: center;
-  width: 100%;
   background-color: #e6bd43;
 }
 body main #frontpage-about img {
@@ -176,18 +176,26 @@ body main #frontpage-about img {
 body main #frontpage-services, body main #aboutpage-services {
   padding: 30px;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  align-items: flex-start;
   text-align: center;
-  background-color: #ffffff;
 }
-body main #frontpage-services img, body main #aboutpage-services img {
-  width: 10%;
+body main #frontpage-services p, body main #aboutpage-services p {
+  margin: 0px;
+}
+body main #frontpage-services h2, body main #aboutpage-services h2 {
+  flex-basis: 100%;
 }
 body main #frontpage-services article, body main #aboutpage-services article {
   margin-top: 30px;
   margin-bottom: 30px;
+  width: 150px;
 }
-body main #frontpage-services p, body main #aboutpage-services p {
-  margin: 0;
+body main #frontpage-services article img, body main #aboutpage-services article img {
+  width: 15%;
 }
 body main #frontpage-newsletter {
   padding: 30px;
@@ -246,14 +254,19 @@ body main #aboutpage-contact #contact-form {
   flex-wrap: wrap;
   gap: 0.5rem;
   justify-content: center;
+  align-content: flex-start;
+  text-align: left;
 }
 body main #aboutpage-contact #contact-form input {
   margin-top: 10px;
   margin-bottom: 10px;
   width: 100%;
-  height: 40px;
+  height: 30px;
   border: none;
   font-size: 1rem;
+}
+body main #aboutpage-contact #contact-form #message {
+  height: 100px;
 }
 body main #aboutpage-contact #contact-information {
   margin-top: 20px;
@@ -352,17 +365,18 @@ body main #portfolio-development img {
 }
 body footer {
   margin: 0;
-  padding: 10px;
+  padding: 30px;
   grid-column: 1/2;
   grid-row: 3/4;
   background-color: #252525;
   display: flex;
+  flex-wrap: wrap;
   align-content: center;
   justify-content: space-between;
   align-items: center;
 }
 body footer img {
-  width: 15%;
+  width: 50%;
 }
 body footer p {
   color: #ffffff;
@@ -426,6 +440,7 @@ body footer #some-icons {
     grid-row: 2/3;
     /* Geeks for geeks ble benyttet som hjelp for å se hvordan det kan løses å sette gjennomsiktig bakgrunn
     uten å samtidig gjøre andre elementer gjennomsiktige */
+    /* W3Schools ble benyttet til hjelp for å få videoen plassert riktig */
   }
   body main #frontpage-headline {
     position: relative;
@@ -444,13 +459,13 @@ body footer #some-icons {
     justify-content: center;
   }
   body main #video-wrapper video {
+    position: absolute;
     display: block;
     overflow: hidden;
     -o-object-fit: cover;
        object-fit: cover;
     height: 100%;
     width: 100%;
-    position: absolute;
     top: 0;
     left: 0;
   }
@@ -471,21 +486,6 @@ body footer #some-icons {
   body main #frontpage-about article {
     margin: 10px;
     width: 250px;
-  }
-  body main #frontpage-services, body main #aboutpage-services {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: center;
-    align-items: flex-start;
-  }
-  body main #frontpage-services h2, body main #aboutpage-services h2 {
-    flex-basis: 100%;
-  }
-  body main #frontpage-services article, body main #aboutpage-services article {
-    margin: 5px;
-    width: 20%;
   }
   body main #frontpage-services article img, body main #aboutpage-services article img {
     width: 25%;
@@ -557,7 +557,7 @@ body footer #some-icons {
     grid-row: 3/4;
   }
   body footer img {
-    width: 10%;
+    width: 50%;
   }
   body footer #some-icons a:hover {
     color: #ffffff;

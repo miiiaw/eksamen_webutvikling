@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>     
-    <!-- Meta tags-->
+    <!-- Meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Shop vintage shoes for women and men -  we have vintage and retro shoes for all occasions">
-    <meta name="keywords" content="Vintage, shoes">
+    <!-- Da jeg var usikker på nettstedets nisje og område, valgte jeg å skrive uspesifikk placeholder-tekst i metadataen -->
+    <meta name="description" content="A very short description of the website and what we can help you with">
+    <meta name="author" content="Author of the web page">
+    <meta name="keywords" content="Branding, Design, Development, Support">
     <!-- Meta tags slutt-->
 
     <!-- Open Graph -->
-    <meta property="og:title" content="The website title">
+    <!-- Generell placeholder-tekst i Open Graph, inkludert eksempelbilde i URL for bilde. -->
+    <meta property="og:title" content="Website title - Engaging subheading">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="#">
-    <meta property="og:image" content="#">
-    <meta property="og:description" content="Engaging headline - Our services and what we can help with">
-    <!-- Open Graph slutt-->
+    <meta property="og:url" content="The URL to the website main page">
+    <meta property="og:image" content="ressurser/branding4.jpg"> 
+    <meta property="og:description" content="Short about our website and what we can help with">
+    <!-- Open Graph slutt -->
     
     <!-- Stilsett og favikon for nettstedet -->
     <link href="css/main.css" rel="stylesheet" type="text/css">
@@ -30,7 +33,7 @@
     <link href="fa/css/solid.css" rel="stylesheet" type="text/css">
     <link href="fa/css/brands.css" rel="stylesheet" type="text/css">
     
-    <title>Forsidetittel</title>
+    <title>Website name - Engaging subheading</title>
 </head>
 <body>
     <div id="grid">
@@ -41,10 +44,10 @@
         <!-- Navigasjon start -->
         <nav>
              <ul role="menubar">
-                <li role="menuitem"><a href="index.html" aria-label="Home">Home</a></li>
+                <li role="menuitem"><a href="index.html" aria-label="Home" class="active">Home</a></li>
                 <li role="menuitem"><a href="portfolio.html" aria-label="Portfolio">Portfolio</a></li>
                 <li role="menuitem"><a href="about.html" aria-label="About">About</a></li>
-                <li role="menuitem"><a href="about.html#aboutpage-contact" aria-label="Contact" class="link-button-golden">Contact</a></li>
+                <li role="menuitem"><a href="about.html#aboutpage-contact" aria-label="Contact" class="link-button-golden" >Contact</a></li>
             </ul>
         </nav>
         <!-- Navigasjon slutt -->
@@ -59,9 +62,9 @@
             <video autoplay loop muted aria-label="A video showing two paragliders over a fjord with mountains in the background">
                 <source src="ressurser/mountains.mp4" type="video/mp4">
             </video>
-            <section id="frontpage-headline">
-                <h1>Compelling headline</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <section id="frontpage-headline" itemscope itemtype="https://schema.org/WebSite">
+                <h1 itemprop="headline">Compelling headline</h1>
+                <p itemprop="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <p><a href="#frontpage-services" aria-label="Read more about our services" class="link-button-golden">Read more about our services</a></p>
             </section>
         </div>

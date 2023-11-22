@@ -1,8 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Da jeg var usikker på nettstedets nisje og område, valgte jeg å skrive uspesifikk placeholder-tekst i metadataen -->
+    <meta name="description" content="A very short description about our company and what we can help you with">
+    <meta name="author" content="Author of the web page">
+    <meta name="keywords" content="Branding, Design, Development, Support">
+    <!-- Meta tags slutt-->
+
+    <!-- Open Graph -->
+    <!-- Generell placeholder-tekst i Open Graph, inkludert eksempelbilde i URL for bilde. -->
+    <meta property="og:title" content="About our company - Engaging subheading">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="The URL to the websites about page">
+    <meta property="og:image" content="ressurser/branding2.jpg"> 
+    <meta property="og:description" content="A short description about our company and what we can help you with.">
+    <!-- Open Graph slutt -->
     
     <!-- Stilsett og favikon for nettstedet -->
     <link href="css/main.css" rel="stylesheet" type="text/css">
@@ -18,7 +33,7 @@
     <link href="fa/css/solid.css" rel="stylesheet" type="text/css">
     <link href="fa/css/brands.css" rel="stylesheet" type="text/css">
     
-    <title>Forsidetittel</title>
+    <title>About our company - Engaging subheading</title>
 </head>
 <body>
     <div id="grid">
@@ -31,7 +46,7 @@
              <ul role="menubar">
                 <li role="menuitem"><a href="index.html" aria-label="Home">Home</a></li>
                 <li role="menuitem"><a href="portfolio.html" aria-label="Portfolio">Portfolio</a></li>
-                <li role="menuitem"><a href="about.html" aria-label="About">About</a></li>
+                <li role="menuitem"><a href="about.html" aria-label="About" class="active">About</a></li>
                 <li role="menuitem"><a href="about.html#aboutpage-contact" aria-label="Contact" class="link-button-golden">Contact</a></li>
             </ul>
         </nav>
@@ -42,11 +57,11 @@
     <!-- Main start -->
     <main>
         <!-- Seksjon for about-boks start -->
-        <section id="aboutpage-headline" aria-label="About our company">
+        <section id="aboutpage-headline" aria-label="About our company" itemscope itemtype="https://schema.org/WebSite">
             <article id="aboutbox">
-                <p id="about-name">Company name</p>
-                <h3>About our company</h3>
-                <p>Facilisis gravida neque convallis a cras semper auctor neque vitae. Hendrerit gravida rutrum quisque non tellus orci. Ultricies integer quis auctor elit. Neque viverra justo nec ultrices. Quam elementum pulvinar etiam non quam. Vulputate mi sit amet mauris commodo quis imperdiet. </p>
+                <p id="about-name" itemprop="name">Company name</p>
+                <h3 itemprop="headline">About our company</h3>
+                <p itemprop="about">Facilisis gravida neque convallis a cras semper auctor neque vitae. Hendrerit gravida rutrum quisque non tellus orci. Ultricies integer quis auctor elit. Neque viverra justo nec ultrices. Quam elementum pulvinar etiam non quam. Vulputate mi sit amet mauris commodo quis imperdiet. </p>
                 <p><a href="#aboutpage-contact" aria-label="Get in touch with us" class="link-button-golden">Get in touch with us</a></p>
             </article>
         </section>
@@ -107,13 +122,13 @@
                 </form>
             </article>
 
-            <article id="contact-information">
+            <article id="contact-information" itemscope itemtype="https://schema.org/Organization">
                 <h3>Contact information</h3>
                 <p>Massa massa ultricies mi quis hendrerit. Purus sit amet volutpat consequat mauris nunc congue. Sit amet tellus cras adipiscing enim.</p>
                 <!-- Ikoner anses som dekorasjon/pynt -->
-                <p><i class="fa-solid fa-location-pin" aria-hidden="true"></i> B R A Veien 4, 1757 Halden</p>
-                <p><i class="fa-solid fa-phone" aria-hidden="true"></i> 69 60 80 00</p>
-                <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> <a href="mailto:postmottak@hiof.no" aria-label="Our email address">postmottak@hiof.no</a></p>
+                <p itemprop="address"><i class="fa-solid fa-location-pin" aria-hidden="true"></i> B R A Veien 4, 1757 Halden</p>
+                <p itemprop="telephone"><i class="fa-solid fa-phone" aria-hidden="true"></i> 69 60 80 00</p>
+                <p itemprop="email"><i class="fa-solid fa-envelope" aria-hidden="true"></i> <a href="mailto:postmottak@hiof.no" aria-label="Our email address">postmottak@hiof.no</a></p>
             </article>
         </section>
         <!-- Seksjon for contact slutt -->

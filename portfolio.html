@@ -1,8 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Da jeg var usikker på nettstedets nisje og område, valgte jeg å sette inn uspesifikk placeholder-tekst i metadataen, 
+        siden nettstedet er på engelsk, valgte jeg å skrive denne på engelsk. Se gjerne PDF-fil for mer informasjon. -->
+    <meta name="description" content="A very short description of the portfolio page">
+    <meta name="author" content="Author of the web page">
+    <meta name="keywords" content="Branding, Design, Development, Support">
+    <!-- Meta tags slutt-->
+
+    <!-- Open Graph -->
+    <!-- Generell placeholder-tekst i Open Graph også, inkludert eksempelbilde i URL for bilde. -->
+    <meta property="og:title" content="Portfolio - Engaging subheading">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="The URL to the websites portfolio page">
+    <meta property="og:image" content="ressurser/branding1.jpg"> 
+    <meta property="og:description" content="A short description of the portfolio">
+    <!-- Open Graph slutt -->
     
     <!-- Stilsett og favikon for nettstedet -->
     <link href="css/main.css" rel="stylesheet" type="text/css">
@@ -18,7 +34,7 @@
     <link href="fa/css/solid.css" rel="stylesheet" type="text/css">
     <link href="fa/css/brands.css" rel="stylesheet" type="text/css">
     
-    <title>Forsidetittel</title>
+    <title>Portfolio - Engaging subheading</title>
 </head>
 <body>
     <div id="grid">
@@ -30,7 +46,7 @@
         <nav>
              <ul role="menubar">
                 <li role="menuitem"><a href="index.html" aria-label="Home">Home</a></li>
-                <li role="menuitem"><a href="portfolio.html" aria-label="Portfolio">Portfolio</a></li>
+                <li role="menuitem"><a href="portfolio.html" aria-label="Portfolio" class="active">Portfolio</a></li>
                 <li role="menuitem"><a href="about.html" aria-label="About">About</a></li>
                 <li role="menuitem"><a href="about.html#aboutpage-contact" aria-label="Contact" class="link-button-golden">Contact</a></li>
             </ul>
@@ -40,7 +56,7 @@
     <!-- Headerområde slutt -->
 
     <!-- Main start -->
-    <main>
+    <main itemscope itemtype="https://schema.org/CollectionPage">
         <!-- Seksjon for heading -->
         <section id="portfolio-heading">
             <h2>Portfolio</h2>
@@ -57,55 +73,55 @@
         <!-- Seksjon for explore slutt -->
 
         <!-- Seksjon for branding start -->
-        <section id="portfolio-branding">
-            <h2>Branding</h2>
+        <section id="portfolio-branding" itemscope itemtype="https://schema.org/CollectionPage">
+            <h2 itemprop="headline">Branding</h2>
             <article class="flex-smaller">
-                <a href="#" aria-label="Go to the option pantone colors"><img src="ressurser/branding1.jpg" alt="A picture of an orange and white cup with pencils in, and with the text Pantone"></a>
-                <h3>Pantone colors.</h3>
+                <a href="#" aria-label="Go to the option pantone colors"><img src="ressurser/branding1.jpg" alt="A picture of an orange and white cup with pencils in, and with the text Pantone" itemprop="image"></a>
+                <h3 itemprop="name">Pantone colors.</h3>
             </article>
             <article class="flex-smaller">
-                <a href="#" aria-label="Go to the option desk set up"><img src="ressurser/branding2.jpg" alt="A picture of a desk set up, with an orange notebook and computer keyboard"></a>
-                <h3>Desk set up</h3>
+                <a href="#" aria-label="Go to the option desk set up"><img src="ressurser/branding2.jpg" alt="A picture of a desk set up, with an orange notebook and computer keyboard" itemprop="image"></a>
+                <h3 itemprop="name">Desk set up</h3>
             </article>
             <article class="flex-smaller">
-                <a href="#" aria-label="Go to the option colorful desk"><img src="ressurser/branding3.jpg" alt="A picture showing a design book, a tablet, watch and phone, on a yellow desk"></a>
-                <h3>Colorful desk</h3>
+                <a href="#" aria-label="Go to the option colorful desk"><img src="ressurser/branding3.jpg" alt="A picture showing a design book, a tablet, watch and phone, on a yellow desk" itemprop="image"></a>
+                <h3 itemprop="name">Colorful desk</h3>
             </article>
             <article class="flex-grow">
-                <a href="#" aria-label="Go to the option cosmetic products"><img src="ressurser/branding4.jpg" alt="A picture showing cosmetic products with an orange background"></a>
-                <h3>Cosmetic products</h3>
+                <a href="#" aria-label="Go to the option cosmetic products"><img src="ressurser/branding4.jpg" alt="A picture showing cosmetic products with an orange background" itemprop="image"></a>
+                <h3 itemprop="name">Cosmetic products</h3>
             </article>
         </section>
         <!-- Seksjon for branding slutt -->
 
         <!-- Seksjon for design start -->
         <section id="portfolio-design">
-            <h2>Design</h2>
+            <h2 itemprop="headline">Design</h2>
             <article class="flex-smaller">
-                <a href="#" aria-label="Go to the option color charts"><img src="ressurser/design1.jpg" alt="A picture showing multiple color charts"></a>
-                <h3>Color charts</h3>
+                <a href="#" aria-label="Go to the option color charts"><img src="ressurser/design1.jpg" alt="A picture showing multiple color charts" itemprop="image"></a>
+                <h3 itemprop="name">Color charts</h3>
             </article>
             <article class="flex-smaller">
-                <a href="#" aria-label="Go to the option painted stripes"><img src="ressurser/design2.jpg" alt="A picture showing painted stripes in green, red, orange and blue"></a>
-                <h3>Painted stripes</h3>
+                <a href="#" aria-label="Go to the option painted stripes"><img src="ressurser/design2.jpg" alt="A picture showing painted stripes in green, red, orange and blue" itemprop="image"></a>
+                <h3 itemprop="name">Painted stripes</h3>
             </article>
             <article class="flex-smaller">
-                <a href="#" aria-label="Go to the option color charts and notes"><img src="ressurser/design3.jpg" alt="A picture showing an open notebook and a color chart, on a pink background"></a>
-                <h3>Color charts and notes</h3>
+                <a href="#" aria-label="Go to the option color charts and notes"><img src="ressurser/design3.jpg" alt="A picture showing an open notebook and a color chart, on a pink background" itemprop="image"></a>
+                <h3 itemprop="name">Color charts and notes</h3>
             </article>
         </section>
         <!-- Seksjon for design slutt -->
 
         <!-- Seksjon for development start -->
         <section id="portfolio-development">
-            <h2>Development</h2>
+            <h2 itemprop="headline">Development</h2>
             <article class="flex-smaller">
-                <a href="#" aria-label="Go to the option remember"><img src="ressurser/development1.jpg" alt="A picture showing post-it notes on a blue wall"></a>
-                <h3>Remember</h3>
+                <a href="#" aria-label="Go to the option remember"><img src="ressurser/development1.jpg" alt="A picture showing post-it notes on a blue wall" itemprop="image"></a>
+                <h3 itemprop="name">Remember</h3>
             </article>
             <article class="flex-smaller">
-                <a href="#" aria-label="Go to the option coding"><img src="ressurser/development2.jpg" alt="A picture showing a computer screen with a coding program open"></a>
-                <h3>Coding</h3>
+                <a href="#" aria-label="Go to the option coding"><img src="ressurser/development2.jpg" alt="A picture showing a computer screen with a coding program open" itemprop="image"></a>
+                <h3 itemprop="name">Coding</h3>
             </article>
         </section>
         <!-- Seksjon for development slutt -->

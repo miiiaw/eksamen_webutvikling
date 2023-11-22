@@ -31,11 +31,11 @@ body{
         font-size: 1rem;
     }
 
-    
-    #top-button{//hjelp av W3
+    /* W3Schools ble benyttet som oppslag for å se hvordan jeg kunne løse det med pilen */
+    #top-button{
         display: inline-block;
         width: 40px;
-        height: 40px;
+        height: 36px;
         padding: 5px;
         bottom: 100px;
         right: 30px;
@@ -88,9 +88,9 @@ body{
 
 /* -----------------------------  Links   -----------------------------*/
     header nav ul a{
-        color: #252525;
-        text-decoration: none;
+        color: #000000;
         font-weight: bold;
+        text-decoration: none;
     }
 
     .link-button-golden{
@@ -123,6 +123,10 @@ body{
     .link-footer{
         text-decoration: none;
         color: #ffffff;
+    }
+
+    .active{
+        border-bottom: 2px solid #e6bd43;
     }
 
 
@@ -428,8 +432,9 @@ body{
         max-width: 1600px;
         
 /* -----------------------------  Links change  -----------------------------*/        
-        header nav ul a:active{
-            border-bottom: 2px solid #e6bd43;
+        header nav ul a:hover{
+            color: #252525;
+            font-weight: bold;
         }
     
         .link-button-golden:hover{ 
@@ -479,12 +484,14 @@ body{
             grid-column: 2/4;
             grid-row: 2/3;
 
+            /* Geeks for geeks ble benyttet som hjelp for å se hvordan det kan løses å sette gjennomsiktig bakgrunn
+            uten å samtidig gjøre andre elementer gjennomsiktige */
             #frontpage-headline{
                 position: relative;
                 padding: 30px;
                 background-image: none;
                 background: rgba(255, 255, 255, 0.5);
-            }//https://www.geeksforgeeks.org/set-the-opacity-only-to-background-color-not-on-the-text-in-css/
+            }
 
             #video-wrapper{
                 position: relative;
@@ -606,22 +613,22 @@ body{
             #portfolio-branding{
                 a:hover img{
                     transform: scale(1.05);
-                    transition: .4s;
+                    transition: transform .8s ease;
                 }
             }
     
             #portfolio-design{
                 a:hover img{
                     transform: scale(1.05);
-                    transition: .4s;
+                    transition: transform .8s ease;
                 }
             }
     
             #portfolio-development{ 
                 a:hover img{
                     transform: scale(1.05);
-                    transition: .4s;
-                }//https://stackoverflow.com/questions/49156966/change-image-size-on-hover        
+                    transition: transform .8s ease;
+                }       
             }
         }
 
